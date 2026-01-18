@@ -65,3 +65,31 @@ class Student(Personnel):
             return 0.0
             
         return total_points / total_credits
+    
+class Enroll:
+    def __init__(self, subject: Subject, grade: str = None):
+        self.__subject = subject
+        self.__grade = grade
+    
+    def get_subject(self):
+        return self.__subject
+    
+    def get_grade(self):
+        return self.__grade
+    
+    def set_grade(self, grade: str):
+        self.__grade = grade
+        
+    def get_points(self):
+        if self.__grade == "A":
+            return 4
+        elif self.__grade == "B":
+            return 3
+        elif self.__grade == "C":
+            return 2
+        elif self.__grade == "D":
+            return 1
+        elif self.__grade == "F":
+            return 0
+        else:
+            return 0
